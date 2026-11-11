@@ -1,58 +1,127 @@
 # CampusFlow — SQA Manual Testing Practice Website
 
-A Flask + HTML + CSS campus management demo. This is intentionally different from an e-commerce website and includes 7 main interfaces:
+CampusFlow is a web-based Campus Management System developed using **Python Flask, HTML, CSS, and JavaScript**. It is designed as a Software Quality Assurance (SQA) manual testing practice project.
 
-1. Dashboard
-2. Students (search, add, duplicate-email validation, delete)
-3. Courses (search)
-4. Attendance (record attendance and validate fields)
-5. Announcements
-6. Reports
-7. Help / Contact (form validation)
+The application provides a simple campus management environment where users can explore student records, courses, attendance, announcements, and reports.
+
+## Features
+
+1. **Dashboard** — Overview of campus information.
+2. **Student Management** — Search, add, and delete student records with duplicate email validation.
+3. **Course Management** — Browse and search available courses.
+4. **Course Details** — View course outlines, instructors, and enrolment information.
+5. **Attendance Management** — Record attendance and validate required fields.
+6. **Announcements** — View campus announcements.
+7. **Reports** — Access campus management reports.
+8. **Help / Contact** — Submit contact forms with input validation.
+9. **Admin Login** — Secure access to portal pages through administrator sign-in.
+
+## Technologies Used
+
+- Python 3
+- Flask
+- HTML5
+- CSS3
+- JavaScript
+- Git and GitHub
 
 ## Requirements
-- Python 3.10+
-- Internet connection only for the optional image download step
 
-## Windows setup (VS Code terminal / PowerShell)
-Open the folder containing `app.py`, then run:
+- Python 3.10 or later
+- pip
+- Web browser
+
+## Installation and Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/msufyan032506-rgb/CampusFlow-SQA-Practice-Project.git
+```
+
+### 2. Open the project folder
+
+```bash
+cd CampusFlow-SQA-Practice-Project
+```
+
+### 3. Create a virtual environment
+
+```bash
+py -m venv .venv
+```
+
+### 4. Activate the virtual environment
 
 ```powershell
-py -m venv .venv
 .venv\Scripts\activate
-pip install -r requirements.txt
+```
+
+### 5. Install dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 6. Download website images
+
+```bash
 python download_images.py
+```
+
+### 7. Run the application
+
+```bash
 python app.py
 ```
 
-If PowerShell blocks activation, skip activation and run:
-```powershell
-.venv\Scripts\python.exe -m pip install -r requirements.txt
-.venv\Scripts\python.exe download_images.py
-.venv\Scripts\python.exe app.py
-```
+Open your browser and visit:
 
-Open `http://127.0.0.1:5000`.
+`http://127.0.0.1:5000`
 
-## Image behavior
-`download_images.py` downloads the website photos into `static/images/`. Run it once after setup. If a photo host is unavailable, the website still loads and its layout remains usable.
+## Administrator Login
 
-## Important demo notes
-- Data is stored in Python memory; restarting the server resets changes.
-- This is a learning/testing application, not a production student information system.
-- Flask debug mode is enabled for local practice only. Do not deploy it publicly as-is.
+The project includes a demonstration administrator login for local testing.
 
-## Suggested SQA practice
-Test positive and negative paths, required fields, invalid email, duplicate student email, search with matching/non-matching terms, delete confirmation, attendance status values, and help form minimum message length. Record actual results and screenshots in your test-case sheet.
+Use the locally configured demo credentials. Do not publish passwords or secret keys in a public repository. Configure credentials and Flask secret keys securely before deployment.
 
-## Administrator sign-in (demo)
-- Username: `Sufyan`
-- Password: `Sufyan@123`
+## SQA Manual Testing Scope
 
-All portal pages now require administrator sign-in. Use the Sign out icon in the sidebar to end the session. This is a local demonstration account; change the password and secret key before any public deployment. The demo account is configured in `app.py` and its password is stored as a Werkzeug password hash.
+This project can be used to practice:
 
-## Course details
-Select any course card from the Courses page to open its course detail page and view the course outline, instructor, and enrolment count.
+- Positive and negative test scenarios
+- Login validation
+- Required field validation
+- Invalid email validation
+- Duplicate student email validation
+- Student search functionality
+- Student deletion confirmation
+- Course search and course details
+- Attendance status validation
+- Contact form validation
+- UI and navigation testing
 
-## Superior University visual theme
-The sign-in page uses the included campus photo as a full-screen background and applies a Superior University maroon-and-navy visual theme. Run `python download_images.py` once to populate the image assets before launching the application.
+## Project Limitations
+
+- Data is stored in Python memory and resets when the server restarts.
+- This application is developed for learning and manual testing practice.
+- Flask debug mode is intended for local development only.
+- The application is not production-ready.
+
+## Future Improvements
+
+- Database integration
+- Automated testing using Selenium or Pytest
+- Improved authentication and authorization
+- Responsive UI enhancements
+- Deployment to a cloud hosting platform
+
+## Author
+
+**Muhammad Sufyan**
+
+GitHub: [msufyan032506-rgb](https://github.com/msufyan032506-rgb)
+
+---
+
+*CampusFlow — A practical project for learning Software Quality Assurance and Manual Testing.*
