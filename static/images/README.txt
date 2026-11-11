@@ -1,0 +1,1 @@
+Run python download_images.py to download the campus photos into this folder.
